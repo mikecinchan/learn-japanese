@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn Japanese - Stroke Animation</title>
+  <script src="https://unpkg.com/wanakana@4.0.2/umd/wanakana.min.js"></script>
+  <style>
+  body {
+    font-family: sans-serif;
+    padding: 2rem;
+  }
+  input {
+    padding: 0.5rem;
+    width: 300px;
+    font-size: 1.2rem;
+  }
+  #kana {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  #stroke-area {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  #stroke-area svg {
+    width: 100px;
+    height: 100px;
+    margin: 0.5rem;
+    background-color: #f0f0f0; /* helps you see strokes clearly */
+  }
+
+  /* force all paths to be black */
+  #stroke-area svg path {
+    stroke: black !important;
+    stroke-width: 2px;
+  }
+</style>
+
+</head>
+<body>
+
+  <h1>Learn Japanese</h1>
+
+  <label for="romaji">Enter Romaji:</label>
+  <input type="text" id="romaji" placeholder="e.g. mirai" />
+
+  <div id="kana"></div>
+  <div id="stroke-area"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
